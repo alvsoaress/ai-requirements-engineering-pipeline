@@ -1,0 +1,4 @@
+crewai==1.15.23
+python-dotenv==1.2.4
+openai==2.54.0
+google-genai==1.65.0
