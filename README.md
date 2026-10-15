@@ -13,6 +13,27 @@ O contexto de exemplo atual é o de um sistema de impressão 3D personalizada. P
 
 Para executar a configuração atual, são necessárias uma chave da OpenAI e uma chave da API do Google/Gemini com acesso aos modelos configurados.
 
+## Início rápido
+
+Após clonar o repositório, execute os comandos abaixo no macOS ou Linux:
+
+```bash
+git clone https://github.com/alvsoaress/ai-requirements-engineering-pipeline.git
+cd ai-requirements-engineering-pipeline
+python -m venv venv
+source venv/bin/activate
+python -m pip install -r requirements.txt
+cp .env.example .env
+```
+
+Preencha as chaves no arquivo `.env` e inicie a pipeline:
+
+```bash
+python main.py
+```
+
+No Windows, use os comandos equivalentes de ativação e cópia apresentados nas seções seguintes.
+
 ## Instalação
 
 No terminal, entre na pasta do projeto:
@@ -51,7 +72,7 @@ Instale as dependências:
 
 ```bash
 python -m pip install --upgrade pip
-python -m pip install crewai python-dotenv openai google-genai
+python -m pip install -r requirements.txt
 ```
 
 ### Bibliotecas e extensões para as APIs
@@ -87,6 +108,7 @@ CHATGPT_API_KEY=sua_chave_da_openai
 ```
 
 Não publique esse arquivo nem suas chaves em repositórios, mensagens ou relatórios. A variável `MISTRALAI_API_KEY` pode existir no seu ambiente, mas não é usada pela versão atual da pipeline.
+As chamadas aos modelos podem consumir créditos conforme o plano contratado em cada provedor.
 
 ## Como executar
 
